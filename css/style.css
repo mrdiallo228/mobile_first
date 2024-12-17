@@ -368,7 +368,6 @@ header {
     text-align: justify;
     padding-left: 50px;
     padding-right: 50px;
-  
 }
 
 /* ------------NOS SERVIVES------------------ */
@@ -432,7 +431,6 @@ p {
     font-size: 16px;
     margin-bottom: 10px;
 }
-
 /*------------NOS REALISATION------------------------ */
 .titreRealisation {
     margin-top: 20px;
@@ -509,7 +507,6 @@ p {
     line-height: 1.6;
     color: #333;
 }
-
 
 .avisClient strong {
     font-size: 16px;
@@ -1156,7 +1153,6 @@ footer {
         line-height: 1.8;
         max-width: 95%; 
     }
-
     /* Bouton Voir Plus */
     .realisation-button button {
         background-color: black;
