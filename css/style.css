@@ -1,0 +1,1195 @@
+/* ---------------------------RESET CSS------------------------------------ */
+/* ********Réinitialiser les marges et les paddings****************** */
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Assure que padding et border sont inclus dans la largeur/hauteur de l'élément */
+}
+/* *****Définir une police de base et une taille de police cohérente***** */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* **********Réinitialiser les styles spécifiques*********** */
+h1,h2, h3, h4, h5, h6 {   /* Enlever les tailles spécifiques par défaut */
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul,ol {
+    list-style: none;  /* Supprimer les puces par défaut */
+}
+
+a {  /* Enlever le soulignement et la couleur par défaut des liens */
+    text-decoration: none;
+    color: inherit;
+}
+
+input,button,textarea,select { /* ***Réinitialiser les styles des formulaires******** */
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+}
+
+input,textarea {  
+    outline: none;/* Enlever les contours par défaut */  
+}
+
+button {
+    cursor: pointer; /* S'assurer que le curseur est une main sur les boutons */ 
+}
+
+img,picture,video,canvas,svg {  /* corriger l’affichage des images */  
+    display: block;
+    max-width: 100%;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-weight: 600;
+    font-weight: 800;
+    src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"),
+        url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype"),
+        url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"),
+        url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"),
+        url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Lato';
+    src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
+        url("../fonts/Lato/Lato-Bold.ttf") format("truetype"),
+        url("../fonts/Lato/Lato-Italic.ttf") format("truetype"),
+        url("../fonts/Lato/OFL.txt") format("opentype");
+    font-weight: 400;
+    font-weight: 600;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'OpenSans';
+    font-weight: 400;
+    font-weight: 600;
+    font-weight: 800;
+    src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype"),
+        url("../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format("truetype"),
+        url("../fonts/Open_Sans/OFL.txt") format("opentype");
+}
+
+/*------------------------- GENERAL-------------------------*/
+body {
+    font-family: 'OpenSans';
+    background-color:rgba(169, 164, 164, 0.5);
+}
+
+h1 {
+    font-family: 'Lato', regular;
+    font-size: 3rem;
+}
+
+h2,h3 {
+    font-family: 'Roboto', regular;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* ---Pour les images de fond d'ecran de chaque page-------- */
+
+/* Style de base pour la section */
+
+.titre-page{
+    text-align: center;
+    padding-top: 150px;
+    background-color:  #0F1D2B;
+    opacity: 0.8;
+}
+.titre-page h3{
+   color: #f4a723;
+   font-size: 45px; 
+   animation: blink 2s step-end infinite; /* Animation clignotante */  
+}
+/* Définition de l'animation blink */
+@keyframes blink {
+    0% {
+      opacity: 1; /* Le texte est visible au début */
+    }
+    50% {
+      opacity: 0; /* Le texte devient invisible à mi-temps */
+    }
+    100% {
+      opacity: 1; /* Le texte redevient visible à la fin */
+    }
+  }
+     
+  /* Animation du texte défilant */
+  /*
+  .titreRealisation{ 
+    animation: scroll-text 8s linear infinite; 
+  }
+  
+
+   /* Animation pour faire défiler le texte */
+@keyframes scroll-text {
+    0% {
+      transform: translateX(100%); /* Débute à droite de l'écran */
+    }
+    100% {
+      transform: translateX(-100%); /* Finit à gauche de l'écran */
+    }
+  }
+  
+   
+  
+/* --------------Page Accueil------------------ */
+/*.page-accueil .image {
+    background-image: url("../img/Photo-fond-accueil.jpg")
+}
+
+/* ---------------Page about---------------------- */
+/*
+.page-about .image {
+    background-image: url("../img/Photo_fond_ecran_apropos1.jpg");
+}
+
+/* ----------Page Nos services---------------- */
+.page-services .image {
+    background-image: url("../img/Photo_fond-ecran_apropos.jpg");
+}
+
+/* --------------------Page contact------------------- */
+.page-contact .image {
+    background-image: url(".");
+}
+
+/* --------------------Les pages des sous menu ------------------- */
+
+/* --------------------Page coiffure ------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+
+}
+
+/* --------------------Page Mauillage------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+}
+
+/* --------------------Page Boutique------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+}
+
+/* --------------------Les pages des sous/sous menu ------------------- */
+
+/* --------------------Page espace homme ------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+}
+
+/* --------------------Page espace femme------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+
+}
+
+/* --------------------Page espace enfant------------------- */
+.page-accueil .image-background {
+    background-image: url('path/to/accueil-image.jpg');
+
+}
+
+/* --------------------Avis de nos clients------------------- */
+.nosClients {
+    background-image: url("../img/photo_fond_nos-clients_disent.jpg");
+    background-size: cover;
+}
+
+/* --------------------------Header------------------------ */
+
+/* ***********************LA BARRE DE NAVIGATION ET LE LOGO*********** */
+header {
+    background-color: #f4a723;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+#logo img {
+    width: 150px;
+    padding-left: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Menu burger */
+.menu-buger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+/* Menu */
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+.menu li {
+    padding: 0 15px;
+}
+.menu li a {
+    text-decoration: none;
+    color: rgb(23, 22, 22);
+    font-size: 30px;
+    margin-right: 40px;
+    border-radius: 15px;
+}
+
+/* Bouton Réserver */
+#bnt_reserver {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+}
+#bnt_reserver:hover {
+    background-color: #f4a723;
+    border-radius: 15px;
+}
+/*-----------section about sur la page d'accueil--------------*/
+/* ----------------Section About------------ */
+.about-section {
+    padding: 20px;
+}
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-image {
+    flex: 1 1 40%;
+}
+.about-image img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.about-content {
+    flex: 1 1 40%;
+    text-align: left;
+}
+.about-content h1 {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+.about-content h1 span {
+    color: #f4a723;
+    font-family: cursive;
+    padding-left: 50px;  
+}
+.about-content p {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 30px;
+    text-align: justify;  
+}
+.about-content button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-content button:hover {
+    background-color: #f4a723;
+}
+/* -----------------------Explorer nos univers(expérience )------------ */
+.Nos_services{
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.Nos_services h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.Nos_services p {
+    font-size: 20px;
+    font-family: 'OpenSans';
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ------------NOS SERVIVES------------------ */
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #f4a723;
+}
+
+/*----------NOUS CHOISIRE-----------------------*/
+.NousChoisire h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.NousChoisire ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.NousChoisire ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/*------------NOS REALISATION------------------------ */
+.titreRealisation {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titreRealisation h3 {
+    font-size: 24px;
+}
+
+.realisation-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.realisation-images img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.realisation p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.realisation-button button {
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.realisation-button button:hover {
+    background-color: #f4a723;
+}
+
+/**-----------LES AVIS DE NOS CLIENTS----------------------- */
+.nosClients {
+    padding: 10px;
+}
+
+.TitreAvis {
+    text-align: center;
+}
+
+.avisClients-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.avisClient {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.avisClient p  {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+.avisClient strong {
+    font-size: 16px;
+}
+
+/* --------------------POUR NOUS VISITER  --------------------- */
+.titreVisite h3 {
+    font-size: 24px;
+}
+
+/* Section adresse */
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.adress a img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.adress p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.adress p span {
+    font-weight: bold;
+    color:#333;
+}
+
+/*------------------page à propos-------*/
+
+.personel-salon h2, .Presentation_salon h2 {
+    text-align: center;
+    width: 100%;
+}
+.personel-salon p, .Presentation_salon p {
+  text-align: justify;
+
+}
+.Presentation_salon, .personel-salon{
+    max-width: 100%;
+}
+/* -----------------------Footer général------------ */
+footer {
+    background-color: #f4a723;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-container h3 {
+    color: black;
+    font-family: 'Roboto';
+    font-size: 2rem;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo p {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    display: block;
+    /* Assure que l'image est un élément de bloc */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.footer-links ul,.footer-legal ul,.footer-social ul,.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,.footer-legal ul li,.footer-social ul li,.footer-contact ul li {
+    margin: 10px 0;
+}
+
+.footer-links a,.footer-legal a,.footer-social a,.footer-contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-contact button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.footer-contact button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+/*----------MEDIA QUERY POUR LE FORMAT TABLETTE MODE(PORTRAIT ET PAYSAGE) COMBINER------------------*/
+
+@media screen and (max-width: 1059px) {
+    
+    #navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        height: 90px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu li {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .menu-buger {
+        display: block;
+        padding-right: 30px;
+    }
+
+    .menu-burger.active+.menu {
+        display: block;
+    }
+
+    .menu li a {
+        font-size: 18px;
+    }
+
+     
+/*-------------lapage à propos------------------*/
+    .personel-salon {
+        flex-direction: column;
+    }
+
+    .personel-salon p, h2 {
+        object-fit: contain;
+    }
+    .presentation_gauche  h2{
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-container div {
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+    }
+
+    #logo img {
+        max-width: 120px;
+    }
+
+    .footer-contact button {
+        border-radius: 15px;
+        width: 50%;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        color: white;
+
+    }
+    /* Ajuste l'image de fond sur mobile */
+    /* Image spécifique pour mobile sur la page d'accueil */
+    .page-accueil .image {
+        background-image: url('../img_format_mobile/Photo-fond-accueil.jpg');
+    }
+    .page-about .image {
+        background-image: url('../img_format_mobile/Photo_fond_ecran_apropos1.jpg');
+    }
+
+    .page-sercices .image {
+        background-image: url('../img_format_mobile/Photo_fond-ecran_apropos.jpg');
+    }
+
+    /* Parie about se trouvant sur la page d'accueil*/
+    .about-container, .container-personel {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about-content h1, .container-personel h2 {
+        font-size: 20px;
+    }
+
+    .about-content p, .container-personel p , .Nos_services p {
+        font-size: 14px;
+        font-family: 'Opensans';
+    }
+    .Nos_services h3{
+        font-size: 18px;
+    }
+
+    .about-content a button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .personel-salon-img img {
+    padding: 10px;
+    max-width: 100%;
+    object-fit: contain;
+    background-size: cover;
+    }
+
+    .personel-salon-img_gauche{
+        padding: 10px;
+        max-width: 100%;
+        object-fit: contain;
+        background-size: cover;
+    }
+        /* ------------NOS SERVIVES------------------ */
+
+    .section-nosServices {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .buttons button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /*----------NOUS CHOISIRE-------------------*/
+    .NousChoisire {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .NousChoisire h3 {
+        font-size: 18px;
+    }
+
+    .NousChoisire ul li {
+        font-size: 14px;
+    }
+
+    /*-------NOS REALISATIONS-------------*/
+    .titreRealisation h3 {
+        font-size: 20px;
+    }
+
+    .realisation {
+        padding: 15px;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .realisation-images img {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .realisation p{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .realisation-button button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    /* ---Avis de nos clients---- */
+
+    .TitreAvis h3 {
+        font-size: 20px;
+        color: black;
+    }
+
+    .avisClient p {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    /*------- Nous rendre visite-----*/
+    .titreVisite h3 {
+        font-size: 20px;
+    }
+
+    .adress p {
+        font-size: 13px;
+    }
+
+    .adress a img{
+        max-width: 100%;
+    }
+}
+
+/*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
+
+@media screen and (min-width: 1060px) {
+    .menu li a {
+        font-size: 16px;
+        flex-direction: column;
+    }
+
+    /* ----------------Section About------------ */
+    .about-section, .personel-salon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-container, .personel-salon {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about-image, .personel-salon-img {
+        flex: 1 1 40%;
+    }
+
+    .about-image img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        padding-top: 20px;
+    }
+    .personel-salon_gauche{ 
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start;   
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .personel-salon_gauche p{
+        margin: 0;
+        padding: 0;
+    }
+
+    .presentation_gauche p{
+        font-size: 20px;
+        font-family:'OpenSans';
+        color: #333;
+        margin-bottom: 30px;
+        text-align: justify;
+        max-width: 50%;
+        margin: auto;
+    }
+    .personel-salon-img img {
+        max-width: 60%;
+        object-fit: cover;
+     
+    }
+    .personel-salon-img_gauche{
+        
+        margin-left: 200px;
+    }
+
+    .about-content, .presentation , .presentation_gauche{
+        flex: 1 1 50%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .about-content h1, .presentation h2{
+        font-size: 3rem;
+        color: #333;
+       
+        text-align: center;
+        font-family: 'Lato';
+    }
+
+    .about-content h1 span {
+        font-family: 'Lato';
+        font-size: 3rem;
+    }
+
+    .about-content p, .Presentation_salon p{
+        font-size: 20px;
+        font-family:'OpenSans';
+        color: #333;
+        margin-bottom: 30px;
+        text-align: justify;
+    }
+
+    .Presentation_salon p{
+        max-width: 90%;
+        margin: auto;  
+    }
+
+     .presentation p {
+        font-size: 20px;
+        font-family:'OpenSans';
+        color: #333;
+        margin-bottom: 30px;
+        text-align: justify;
+        margin-left: 100px;
+        max-width: 60%;
+        margin: auto;
+    }
+   
+
+    .about-content button {
+        background-color: black;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .about-content button:hover {
+        background-color: #f4a723;
+    }
+
+    /* -------NOS SERVICES-------------- */
+
+    .section-nosServices {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        margin: 40px;
+    }
+
+    .section-nosServices .section-coiffure, .section-maquillage, .section-boutique {
+        flex: 1 1 300px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .section-nosServices section:hover {
+        transform: translateY(-5px);
+    }
+    .section-nosServices h3 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 15px;
+        padding: 0px;
+        margin: 0;
+        font-family: 'Roboto';
+    }
+    .section-nosServices img {
+        width: 90%;
+        height: 60%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        margin-left: 30px;
+    }
+    .section-nosServices p {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: justify;
+        font-family: 'OpenSans';
+        line-height: 1.8;
+    }
+
+    .section-nosServices .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .section-nosServices button {
+        background-color: black;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .section-nosServices button:hover {
+        background-color: #f4a723;
+    }
+
+    /*---------------BOUTON "LIRE LA SUITE"-------------------*/
+    .Presentation_salon {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Cache l'input checkbox */
+    .read-more-check {
+        display: none;
+    }
+
+    /* Cache le texte supplémentaire par défaut */
+    .more-text {
+        display: none;
+    }
+
+    /* Style du bouton "Lire la suite" */
+    .read-more-btn {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 120px;
+    }
+
+    /* Affiche le texte supplémentaire si la checkbox est cochée */
+    .read-more-check:checked ~ #text .more-text {
+        display: inline;
+    }
+
+    /* Change le texte du bouton en "Afficher moins" */
+    .read-more-btn::before {
+        content: "Lire la suite...";
+    }
+
+    .read-more-check:checked ~ .read-more-btn::before {
+        content: "Afficher moins";
+    }
+
+    /*---------Partie pourquoi nous choisire-----------*/
+
+    .NousChoisire {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .NousChoisire h3 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Roboto';
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .NousChoisire ul li {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Opensans';
+        line-height: 1.8;
+        color: #333;
+    }
+
+    /*  -----------------------NOS RESALSATION--------------- */
+
+    .titreRealisation {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .titreRealisation h3, .titreVisite h3, .TitreAvis h3 {
+        font-size: 2rem;
+        font-family: 'Roboto';
+        color: #333;
+        margin: 0;
+        text-align: center;
+    }
+    .realisation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        border-radius: 10px;
+    }
+
+    /* Images Grid */
+
+    .realisation-images , .section-nosServices {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        width: 90%;
+    }
+    .realisation-images img{
+        width: 80%;
+        height: 80%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .realisation-images img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Paragraphe */
+    .realisation p {
+        font-size: 20px;
+        font-family: 'Opensans';
+        color: #333;
+        line-height: 1.8;
+        max-width: 95%; 
+    }
+
+    /* Bouton Voir Plus */
+    .realisation-button button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .realisation-button button:hover {
+        background-color: #f4a723;
+    }
+
+    .avisClients-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        padding-left: 80px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+        height:500px;
+        object-fit: cover;
+    }
+
+}
