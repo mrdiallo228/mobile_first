@@ -669,7 +669,7 @@ footer {
     .menu li a {
         font-size: 18px;
     }
-
+   
      
 /*-------------lapage à propos------------------*/
     .personel-salon {
@@ -853,6 +853,43 @@ footer {
     .adress a img{
         max-width: 100%;
     }
+     /*---------------BOUTON "LIRE LA SUITE"-------------------*/
+     .Presentation_salon {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Cache l'input checkbox */
+    .read-more-check {
+        display: none;
+    }
+
+    /* Cache le texte supplémentaire par défaut */
+    .more-text {
+        display: none;
+    }
+
+    /* Style du bouton "Lire la suite" */
+    .read-more-btn {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 120px;
+    }
+
+    /* Affiche le texte supplémentaire si la checkbox est cochée */
+    .read-more-check:checked ~ #text .more-text {
+        display: inline;
+    }
+
+    /* Change le texte du bouton en "Afficher moins" */
+    .read-more-btn::before {
+        content: "Lire la suite...";
+    }
+
+    .read-more-check:checked ~ .read-more-btn::before {
+        content: "Afficher moins";
+    }
+
 }
 
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
