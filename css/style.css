@@ -320,7 +320,7 @@ header {
     text-align: center; 
 }
 .about-content h1 span {
-    color: #f4a723;
+    color: black;
     font-family: cursive;
      margin-bottom: 0;
 }
@@ -357,7 +357,7 @@ header {
     font-size: 2rem;
     margin-bottom: 10px;
     text-align: center;
-    color: #333;
+    color: black;
 }
 
 .Nos_services p {
@@ -664,6 +664,7 @@ footer {
     .menu-burger.active+.menu {
         display: block;
     }
+    
 
     .menu li a {
         font-size: 18px;
@@ -935,6 +936,7 @@ footer {
     .about-content h1 span {
         font-family: 'Lato';
         font-size: 3rem;
+        color: black;
     }
 
     .about-content p, .Presentation_salon p{
@@ -959,6 +961,9 @@ footer {
         margin-left: 100px;
         max-width: 60%;
         margin: auto;
+    }
+    .presentation h2{
+        color: black;
     }
    
 
