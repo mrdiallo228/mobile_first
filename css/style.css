@@ -171,7 +171,7 @@ p {
 
 /* --------------------Page contact------------------- */
 .page-contact .image {
-    background-image: url(".");
+    background-image: url(" ");
 }
 
 /* --------------------Les pages des sous menu ------------------- */
@@ -218,50 +218,6 @@ p {
 }
 
 /* --------------------------Header------------------------ */
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .carousel img {
-    width: 100%;
-    display: block;
-    border-radius: 5px;
-  }
-
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  .carousel-btn.prev {
-    left: 10px;
-  }
-
-  .carousel-btn.next {
-    right: 10px;
-  }
 /* ***********************LA BARRE DE NAVIGATION ET LE LOGO*********** */
 header {
     background-color: #f4a723;
@@ -286,17 +242,17 @@ header {
 }
 /* Menu burger */
 .menu-buger {
-    display: none;
+    display: none;  /* Masqué par défaut sur les écrans larges */
     font-size: 30px;
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
 }
-/* Menu */
-.menu {
+.menu {   /* Style du menu ul */
     display: flex;
     list-style-type: none;
+    margin-left: auto;
 }
 .menu li {
     padding: 0 15px;
@@ -308,16 +264,13 @@ header {
     margin-right: 40px;
     border-radius: 15px;
 }
-
-/* Bouton Réserver */
-#bnt_reserver {
+#bnt_reserver { 
     background-color: #000000;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 15px;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -436,14 +389,14 @@ p {
     padding: 20px;
 }
 
-.buttons {
+.buttons, .btn  {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-.buttons button {
+.buttons button, .btn  {
     background-color: black;
     color: #ffffff;
     border: none;
@@ -454,7 +407,7 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.buttons button:hover {
+.buttons button, .btn:hover {
     background-color: #f4a723;
 }
 
@@ -602,6 +555,72 @@ p {
 .Presentation_salon, .personel-salon{
     max-width: 100%;
 }
+
+
+/*------------------FORMULAIRE DE CONTACT------------------*/
+
+.contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input, select, textarea {
+   width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .form-group-consent, .form-group-civility {
+    display: flex;
+    align-items:center; /* Aligne verticalement la case à cocher et le texte */
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+  }
+  
+  .form-group-consent input[type="radio"] + label,
+  .form-group-civility input[type="radio"] + label{
+    margin-left: 10px;
+  }
+  input[type="radio"] + label{
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .form-group-consent label {
+    font-size: 0.7rem; /* Ajuster la taille du texte si nécessaire */
+    line-height: 1.4;  /* Espacement entre les lignes si le texte est long */
+    padding-left: 20px;
+  }
+  .civility{
+    margin-bottom: 10px;
+  }
+  #mr{
+    margin-left: 10px;
+  }
+
+
 /* -----------------------Footer général------------ */
 footer {
     background-color: #f4a723;
@@ -704,16 +723,20 @@ footer {
         padding-right: 30px;
     }
 
-    .menu-burger.active+.menu {
-        display: block;
+    .menu-burger.active + .menu {
+        display: flex;
+        transform: translateY(0); /* Fait réapparaître le menu */
     }
-    
-
+        
+        
     .menu li a {
         font-size: 18px;
     }
-   
-     
+
+     .menu-burger {
+        display: block; /* Affiche le bouton burger sur mobile */
+    }
+
 /*-------------lapage à propos------------------*/
     .personel-salon {
         flex-direction: column;
@@ -1005,10 +1028,9 @@ footer {
         padding: 0;
     }
 
-    .about-content h1, .presentation h2{
+    .about-content h1, .presentation h2,   .contact-form h1 {
         font-size: 3rem;
         color: #333;
-       
         text-align: center;
         font-family: 'Lato';
     }
@@ -1019,7 +1041,7 @@ footer {
         color: black;
     }
 
-    .about-content p, .Presentation_salon p{
+    .about-content p, .Presentation_salon p, .contact-form p{
         font-size: 20px;
         font-family:'OpenSans';
         color: #333;

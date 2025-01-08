@@ -10,7 +10,6 @@
     <link rel="icon" href="icones/favicongenerator.io (1)/favicongenerator.io/favicon-32x32.png">
     <script src="js/javascript.js" defer></script>
 </head>
-
 <body class="images-fond">
     <header>
         <nav id="navbar">
@@ -29,17 +28,66 @@
                 </button>
             </ul>
         </nav>
-
     </header>
     <main>
         <div class="titre-page"> 
-            <h3>NOUS CONTACTER</h3>
+            <h3>CONTACT</h3>
         </div>
-
-        <p>Cette page sera completer prochainmemnt avec les autres pages restatntes</p>
-
+        <div class="contact-form">
+                <h1>Formulaire de Contact</h1>
+                    <p>
+                        Nous serions ravis de répondre à vos questions, de vous aider à réserver un rendez-vous ou de recueillir vos avis. Remplissez le formulaire ci-dessous et nous reviendrons vers vous dans les plus brefs délais.
+                    </p>
+                <form id="contactForm">
+                    <div class="civility"> 
+                        <!-- <label for="civility">Civilité :</label> -->
+                    </div>
+                        <fieldset> 
+                                       <legend>Civilité:</legend>
+                        <div class="form-group-civility">
+                            <input type="radio" id="mme" name="civility" value="Mme"><label for="mme">Mme</label>
+                            <input type="radio" id="mr" name="civility" value="M."><label for="mr">M.</label>
+                        </div>
+                        </fieldset>
+                    <div class="form-group">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" rows="5" placeholder="Votre nom ici..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname" name="firstname"  placeholder="Votre prénom ici..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail :</label>
+                        <input type="email" id="email" name="email"  placeholder="Votre adresse mail ici..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone :</label>
+                        <input type="tel" id="phone" name="phone"  placeholder="Votre numéro de Téléphone ici..."required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Objet :</label>
+                        <select id="reason" name="reason" required>
+                            <option value="" disabled selected>Choisissez une option</option>
+                            <option value="reservation">Réservation</option>
+                            <option value="information">Informations</option>
+                            <option value="avis">Avis</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+                    </div>
+                    <div class="form-group-consent">
+                        <input type="radio" id="consent" name="consent" required>
+                        <label for="consent">"J'accepte que mes données personnelles soient collectées et utilisées conformément à la politique de confidentialité."</label>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+        </div>
+          <script src="script.js"></script>
     </main>
-
     <footer>
         <nav class="footer-container">
             <!-- Logo et adresse -->
@@ -88,12 +136,10 @@
                 </ul>
             </div>
         </nav>
-
     </footer>
     <!-- Copyright -->
     <div class="footer-bottom">
         <p>© 2025 Mimi Coiffure. Tous droits réservés.</p>
     </div>
 </body>
-
 </html>
