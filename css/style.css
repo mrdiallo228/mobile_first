@@ -723,7 +723,7 @@ footer {
     /*------------BURGER MENU--------------*/
     /* Sidenav menu */
 .sidenav {
-    height: 35%;
+    height: 25%;
     width: 250px;
     z-index: 1;
     top: 0;
