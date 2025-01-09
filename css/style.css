@@ -725,7 +725,6 @@ footer {
 .sidenav {
     height: 25%;
     width: 250px;
-    z-index: 1;
     top: 0;
     left: -250px;
     background-color: #f4a723;
@@ -733,7 +732,7 @@ footer {
     transition: left 0.5s ease;
     position: fixed;
     z-index: 1000;
-    object-fit: cover;
+   
   }
   
   .sidenav ul {
@@ -767,11 +766,9 @@ footer {
     border-radius: 15px;
 }
   
-  
   /* Active class */
   .sidenav.active {
     left: 0;
- 
   }
   
   /* Close btn */
@@ -787,7 +784,11 @@ footer {
     width: 35px;
     height: 5px;
     background-color: black;
-    margin: 8px;
+    margin: 6px;
+  }
+  .burger{
+    margin-top: 20px;
+    margin-right: 30px;
   }
 
   /*-------------lapage à propos------------------*/
