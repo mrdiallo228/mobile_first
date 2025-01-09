@@ -1022,7 +1022,7 @@ footer {
     
   /*--- empeche l'affichage du menu buer  et la croix de fermeture qaund l'ecran au format desktop--- */
 
-#openBtn, #closeBtn{
+#openBtn, #closeBtn, .burger{
     display: none;
 }
     /* ----------------Section About------------ */
