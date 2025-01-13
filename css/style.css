@@ -299,7 +299,6 @@ header {
     height: 50%;
     border-radius: 10px;
     object-fit: cover;
-   
 }
 .about-content {
     flex: 1 1 40%;
@@ -390,6 +389,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 30px;
 }
 
 .buttons button, .btn  {
@@ -655,9 +655,7 @@ footer {
     /* Assure que l'image est un élément de bloc */
     margin-left: auto;
     margin-right: auto;
-
 }
-
 .footer-links ul,.footer-legal ul,.footer-social ul,.footer-contact ul {
     list-style: none;
     padding: 0;
@@ -671,7 +669,6 @@ footer {
     text-decoration: none;
     color: black;
 }
-
 .footer-contact button {
     background-color: #000;
     color: #fff;
@@ -710,38 +707,30 @@ footer {
 
     .menu li {
         width: 100%;
-        padding: 10px;
-        text-align: left;
+        padding: 10px;  
     }
-    .menu li a {
+    .menu li a{
         font-size: 15px;
+        padding: 0;  
     }
-
-    /*-----BOUTON RESERVER-----*/
-
     
-    /*------------BURGER MENU--------------*/
+    /*------------ MENU BURGER --------------*/
     /* Sidenav menu */
+    
 .sidenav {
-    height: 25%;
-    width: 250px;
+    height: 300px;
+    width: 1250px;
     top: 0;
-    left: -250px;
+    left: 100%; /* Positionne l'élément à 100% de la largeur de l'écran */
     background-color: #f4a723;
-    padding-top: 20px;
+    padding-top: 70px;
     transition: left 0.5s ease;
     position: fixed;
     z-index: 1000;
-   
   }
+     
   
-  .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Sidenav menu links */
+  /* liens menu Sidenav */
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -749,36 +738,37 @@ footer {
     color: black;
     display: block;
     transition: 0.3s;
-    padding: 0; 
   }
+
   #bnt_reserver{
-    background-color: #fff;
+    background-color: #0a0a0a;
     font-size: 10px; 
-    padding: 5px 10px; 
-    margin-left: 8px;
+    padding: 0; 
+    margin: 0;
+   
   }
   #bnt_reserver a{
     font-size: 15px;
+    color: white;
+    justify-content: center;
   }
 
   #bnt_reserver:hover {
     background-color: #f4a723;
-    border-radius: 15px;
 }
-  
+
   /* Active class */
   .sidenav.active {
     left: 0;
   }
   
-  /* Close btn */
+  /* btn de fermeture */
   .sidenav .close {
     position: absolute;
-    top: 0;
-    right: 25px;
     font-size: 36px;
+    left: 0px;
+    top: 10px;
   }
-  
   .burger-icon span {
     display: block;
     width: 35px;
@@ -812,6 +802,7 @@ footer {
     .footer-container div {
         margin-bottom: 20px;
         min-width: 100%;
+        margin: 0;
     }
 
     .footer-logo img {
@@ -825,7 +816,7 @@ footer {
 
     .footer-contact button {
         border-radius: 15px;
-        width: 50%;
+        width: 25%;
     }
 
     .footer-bottom {
@@ -1252,6 +1243,7 @@ footer {
     .NousChoisire {
         padding: 30px;
         margin: 20px;
+        margin-top: 80px;
     }
 
     .NousChoisire h3 {
@@ -1350,5 +1342,4 @@ footer {
         height:500px;
         object-fit: cover;
     }
-
 }

@@ -15,15 +15,27 @@
             <div id="logo">
                 <img src="icones/logomodif.svg" alt="logo de mon site">
             </div>
-            <button class="menu-buger" aria-label="Ouvrir le menu">&#9776;</button>
-            <ul class="menu">
-                <li><a href="index.html"><i class="bi bi-house-door-fill"></i>Accueil</a></li>
-                <li><a href="about.html"><i class="bi bi-file-person"></i>Apropos</a></li>
-                <li class="services"><a href="sevices.html"> <i class="bi bi-tools"></i>Nos services</a>
-                </li>
-                <li><a href="contact.html"><i class="bi bi-telephone-fill"></i>Contact</a></li>
-                <button id="bnt_reserver">Réserver</button>
-            </ul>
+             <!-- Menu qui se cache et s'affiche au clic -->
+              
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">&times;</a>
+                <ul class="menu">
+                    <li><a href="index.html"> <i class="bi bi-house"></i>Accueil</a></li>
+                    <li><a href="about.html"><i class="bi bi-file-person-fill"></i>Apropos</a></li>
+                    <li class="services"><a href="sevices.html"><i class="bi bi-tools"></i>Nos services</a></li>
+                    <li><a href="contact.html"><i class="bi bi-telephone-fill"></i>Contact</a></li>
+                    <button id="bnt_reserver"><a href="https://www.planity.com/" target="_blank">Réserver</a></button>
+                </ul>
+            </div> 
+            <div class="burger">   
+                <a href="#" id="openBtn">
+                    <span class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+            </div>
         </nav>
     </header>
     <main>
