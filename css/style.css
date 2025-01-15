@@ -447,6 +447,108 @@ p {
     border-radius: 8px;
 }
 
+/*-----------------------Carrousel--------------------------------*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
+
+}
+
+.carousel-column {
+    width: 100%;   
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slide {
+    flex: 1 0 100%;
+    height: 100%;
+   
+}
+
+.slide img {
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .carousel-inner {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-inner {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-inner {
+    transform: translateX(-200%);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-controls label {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.carousel-controls label:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.carousel-dots label {
+    width: 10px;
+    height: 10px;
+    background-color: #f4a723;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #333;
+}
+
+/*---------------------text(h et p)------------------------------*/
 .realisation p {
     font-size: 16px;
     margin-bottom: 15px;
@@ -1008,6 +1110,52 @@ footer {
     .read-more-check:checked ~ .read-more-btn::before {
         content: "Afficher moins";
     }
+
+    /*----------------------------------------------CARROUSEL-----------------------------------------*/
+    .container {
+        display: flex;
+        flex-direction: column; /* Colonne en mobile */
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Ajuster la hauteur et largeur des carrousels pour mieux s'adapter */
+    .carousel-column {
+        width: 100%; /* Occupe toute la largeur */
+
+    }
+
+    .carousel {
+        width: 100%; /* Assurez-vous que le carrousel utilise toute la largeur de la colonne */
+    }
+
+    .carousel-inner {
+        width: 100%; /* Toujours pour 3 diapositives */
+    }
+
+    .slide img{
+        max-width: 100%;
+        max-height: 100%; 
+        object-fit: contain;
+    }
+
+    /* Réduire la taille des boutons de navigation et des points */
+    .carousel-controls label {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .carousel-dots label {
+        width: 8px;
+        height: 8px;
+    }
+    .section-coiffure, .container, .carousel-column{
+        padding: 0;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
@@ -1275,6 +1423,10 @@ footer {
         line-height: 1.8;
         color: #333;
     }
+    .NousChoisire ul{
+        list-style: none;
+    }
+
 
     /*  -----------------------NOS RESALSATION--------------- */
 
