@@ -16,33 +16,32 @@
    sidenav.classList.remove("active");
  }
  
- 
  //---------------------------------------------CARROUSEL
  document.querySelectorAll('.carousel').forEach(carousel => {
-   const prevButton = carousel.querySelector('.prev');
-   const nextButton = carousel.querySelector('.next');
-   const slides = carousel.querySelectorAll('.slide');
-   const carouselInner = carousel.querySelector('.carousel-inner');  // Sélectionner la partie interne du carrousel
-   let currentIndex = 0;
- 
-   function updateCarousel() {
-       // Calculer le décalage pour le défilement des images
-       const offset = -currentIndex * 100;  // La largeur de chaque diapositive est de 100% de l'élément parent
-       carouselInner.style.transform = `translateX(${offset}%)`;
-   }
- 
-   // Gérer le clic sur le bouton précédent
-   prevButton.addEventListener('click', () => {
-       currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-       updateCarousel();
-   });
- 
-   // Gérer le clic sur le bouton suivant
-   nextButton.addEventListener('click', () => {
-       currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-       updateCarousel();
-   });
- });
+  const prevButton = carousel.querySelector('.prev');
+  const nextButton = carousel.querySelector('.next');
+  const slides = carousel.querySelectorAll('.slide');
+  const carouselInner = carousel.querySelector('.carousel-inner');  // Sélectionner la partie interne du carrousel
+  let currentIndex = 0;
+
+  function updateCarousel() {
+      // Calculer le décalage pour le défilement des images
+      const offset = -currentIndex * 100;  // La largeur de chaque diapositive est de 100% de l'élément parent
+      carouselInner.style.transform = `translateX(${offset}%)`;
+  }
+
+  // Gérer le clic sur le bouton précédent
+  prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+      updateCarousel();
+  });
+
+  // Gérer le clic sur le bouton suivant
+  nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+  });
+});
  
  //---------------------------gestion du formulaire de contact
  document.getElementById("contactForm").addEventListener("submit", function (event) {

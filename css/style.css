@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Assure que padding et border sont inclus dans la largeur/hauteur de l'élément */
 }
 /* *****Définir une police de base et une taille de police cohérente***** */
 body {
@@ -140,7 +139,6 @@ p {
     animation: scroll-text 8s linear infinite; 
   }
   
-
    /* Animation pour faire défiler le texte */
 @keyframes scroll-text {
     0% {
@@ -151,11 +149,9 @@ p {
     }
   }
   
-   
-  
 /* --------------Page Accueil------------------ */
 /*.page-accueil .image {
-    background-image: url("../img/Photo-fond-accueil.jpg")
+    background-image: url("../img/produit_boutique.jpg");
 }
 
 /* ---------------Page about---------------------- */
@@ -274,7 +270,6 @@ header {
     background-color: #f4a723;
     border-radius: 15px;
 }
-
 
 /*-----------section about sur la page d'accueil--------------*/
 /* ----------------Section About------------ */
@@ -455,7 +450,6 @@ p {
     gap: 60px;
     margin-left: 90px;
     margin-right: 90px;
-
 }
 
 .carousel-column {
@@ -487,10 +481,11 @@ p {
     flex-direction: column;
     object-fit: cover;
 }
-
+/*
 input[type="radio"] {
     display: none;
 }
+    */
 
 #slide1:checked ~ .carousel-inner {
     transform: translateX(0);
@@ -512,7 +507,7 @@ input[type="radio"] {
     left: 0;
     width: 100%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: 2;  
 }
 
 .carousel-controls label {
@@ -532,7 +527,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 5px;
+    gap: 5px; 
 }
 
 .carousel-dots label {
@@ -545,9 +540,13 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-    background-color: #333;
+    cursor: pointer;
 }
 
+.prev, .next{
+    color: #f4a723;
+    background-color: #3b3a3a; 
+}
 /*---------------------text(h et p)------------------------------*/
 .realisation p {
     font-size: 16px;
@@ -584,8 +583,7 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     gap: 50px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;   
 }
 
 .avisClient {
@@ -654,7 +652,6 @@ input[type="radio"]:checked + label {
     max-width: 100%;
 }
 
-
 /*------------------FORMULAIRE DE CONTACT------------------*/
 
 .contact-form {
@@ -694,21 +691,21 @@ input[type="radio"]:checked + label {
     align-items:center; /* Aligne verticalement la case à cocher et le texte */
     margin-bottom: 20px;
     margin-left: 10px;
-
   }
   
   .form-group-consent input[type="radio"] + label,
   .form-group-civility input[type="radio"] + label{
     margin-left: 10px;
   }
+
   input[type="radio"] + label{
     margin-left: 0;
     padding-left: 0;
   }
   
   .form-group-consent label {
-    font-size: 0.7rem; /* Ajuster la taille du texte si nécessaire */
-    line-height: 1.4;  /* Espacement entre les lignes si le texte est long */
+    font-size: 0.7rem; 
+    line-height: 1.4;  
     padding-left: 20px;
   }
   .civility{
@@ -717,8 +714,9 @@ input[type="radio"]:checked + label {
   #mr{
     margin-left: 10px;
   }
-
-
+  legend{
+    margin-left: 20px;
+  }
 /* -----------------------Footer général------------ */
 footer {
     background-color: #f4a723;
@@ -753,8 +751,7 @@ footer {
 
 .footer-logo img {
     max-width: 100px;
-    display: block;
-    /* Assure que l'image est un élément de bloc */
+    display: block;   /* Assure que l'image est un élément de bloc */
     margin-left: auto;
     margin-right: auto;
 }
@@ -794,7 +791,6 @@ footer {
 /*----------MEDIA QUERY POUR LE FORMAT TABLETTE MODE(PORTRAIT ET PAYSAGE) COMBINER------------------*/
 
 @media screen and (max-width: 1059px) {
-    
     #navbar {
         flex-direction: row;
         align-items: flex-start;
@@ -815,7 +811,6 @@ footer {
         font-size: 30px;
         padding: 0;  
         margin-left: 70px;
-     
     }
 
     .bi-house, .bi-file-person-fill, .bi-tools, .bi-telephone-fill{
@@ -890,7 +885,7 @@ footer {
     margin-right: 50px;
   }
 
-  /*-------------lapage à propos------------------*/
+  /*-------------la page à propos------------------*/
     .personel-salon {
         flex-direction: column;
     }
@@ -955,14 +950,17 @@ footer {
 
     .about-content h1, .container-personel h2 {
         font-size: 20px;
+        color: black;
     }
 
     .about-content p, .container-personel p , .Nos_services p {
         font-size: 14px;
         font-family: 'Opensans';
+        color: black;
     }
     .Nos_services h3{
         font-size: 18px;
+        color: black;
     }
 
     .about-content a button {
@@ -1006,6 +1004,7 @@ footer {
     .buttons button {
         padding: 8px 16px;
         font-size: 12px;
+        background-color: black;
     }
 
     /*----------NOUS CHOISIRE-------------------*/
@@ -1025,6 +1024,7 @@ footer {
     /*-------NOS REALISATIONS-------------*/
     .titreRealisation h3 {
         font-size: 20px;
+       
     }
 
     .realisation {
@@ -1052,11 +1052,11 @@ footer {
     }
     /* ---Avis de nos clients---- */
 
-    .TitreAvis h3 {
+    .TitreAvis h3, .section-coiffure h3, .section-maquillage h3, .section-boutique h3, .titreRealisation h3, .titreVisite h3 {
         font-size: 20px;
         color: black;
     }
-
+    
     .avisClient p {
         font-size: 13px;
         text-align: justify;
@@ -1123,11 +1123,10 @@ footer {
     /* Ajuster la hauteur et largeur des carrousels pour mieux s'adapter */
     .carousel-column {
         width: 100%; /* Occupe toute la largeur */
-
     }
 
     .carousel {
-        width: 100%; /* Assurez-vous que le carrousel utilise toute la largeur de la colonne */
+        width: 100%; /* pour s'assurer que le carrousel utilise toute la largeur de la colonne */
     }
 
     .carousel-inner {
@@ -1156,6 +1155,7 @@ footer {
         margin-left: 0;
         margin-right: 0;
     }
+    
 }
 
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
@@ -1170,15 +1170,14 @@ footer {
         margin-right: 10px;
     }
     
-  /*--- empeche l'affichage du menu buer  et la croix de fermeture qaund l'ecran au format desktop--- */
-
-#openBtn, #closeBtn{
-    display: none;
-}
-.burger{
-    display: none;
-}
-    /* ----------------Section About------------ */
+  /*--- empeche l'affichage du menu burger  et la croix de fermeture qaund l'ecran au format desktop--- */
+    #openBtn, #closeBtn{
+        display: none;
+    }
+    .burger{
+        display: none;
+    }
+        /* ----------------Section About------------ */
     .about-section, .personel-salon {
         display: flex;
         align-items: center;
@@ -1204,6 +1203,7 @@ footer {
         object-fit: cover;
         padding-top: 20px;
     }
+
     .personel-salon_gauche{ 
         display: flex; 
         align-items: center; 
@@ -1230,6 +1230,7 @@ footer {
         object-fit: cover;
         margin-bottom: 50px;
     }
+
     .personel-salon-img_gauche{
         margin-left: 200px;
     }
@@ -1280,7 +1281,6 @@ footer {
         color: black;
     }
    
-
     .about-content button {
         background-color: black;
         color: #fff;
@@ -1426,7 +1426,6 @@ footer {
     .NousChoisire ul{
         list-style: none;
     }
-
 
     /*  -----------------------NOS RESALSATION--------------- */
 
