@@ -149,64 +149,23 @@ p {
     }
   }
   
+   /*-------faire clgnoter les prix---------*/
+ @keyframes flash {
+    0% { color: #ff0000; } /* Couleur rouge au début */
+    50% { color: #00ff00; } /* Couleur verte au milieu */
+    100% { color: #f4a723; } /* Couleur rouge à la fin */
+  }
+  
+  .flash {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .flash {
+    animation: flash 1s infinite; /* Applique l'animation en boucle infinie toutes les 1 seconde */
+  }
 /* --------------Page Accueil------------------ */
-/*.page-accueil .image {
-    background-image: url("../img/produit_boutique.jpg");
-}
-
-/* ---------------Page about---------------------- */
-/*
-.page-about .image {
-    background-image: url("../img/Photo_fond_ecran_apropos1.jpg");
-}
-
-/* ----------Page Nos services---------------- */
-.page-services .image {
-    background-image: url("../img/Photo_fond-ecran_apropos.jpg");
-}
-
-/* --------------------Page contact------------------- */
-.page-contact .image {
-    background-image: url(" ");
-}
-
-/* --------------------Les pages des sous menu ------------------- */
-
-/* --------------------Page coiffure ------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-
-}
-
-/* --------------------Page Mauillage------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-}
-
-/* --------------------Page Boutique------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-}
-
-/* --------------------Les pages des sous/sous menu ------------------- */
-
-/* --------------------Page espace homme ------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-}
-
-/* --------------------Page espace femme------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-
-}
-
-/* --------------------Page espace enfant------------------- */
-.page-accueil .image-background {
-    background-image: url('path/to/accueil-image.jpg');
-
-}
-
 /* --------------------Avis de nos clients------------------- */
 .nosClients {
     background-image: url("../img/photo_fond_nos-clients_disent.jpg");
@@ -481,11 +440,6 @@ p {
     flex-direction: column;
     object-fit: cover;
 }
-/*
-input[type="radio"] {
-    display: none;
-}
-    */
 
 #slide1:checked ~ .carousel-inner {
     transform: translateX(0);
@@ -788,6 +742,8 @@ footer {
     width: 100%;
 }
 
+
+
 /*----------MEDIA QUERY POUR LE FORMAT TABLETTE MODE(PORTRAIT ET PAYSAGE) COMBINER------------------*/
 
 @media screen and (max-width: 1059px) {
@@ -927,19 +883,6 @@ footer {
         font-size: 12px;
         color: white;
     }
-    /* Ajuste l'image de fond sur mobile */
-    /* Image spécifique pour mobile sur la page d'accueil */
-    .page-accueil .image {
-        background-image: url('../img_format_mobile/Photo-fond-accueil.jpg');
-    }
-    .page-about .image {
-        background-image: url('../img_format_mobile/Photo_fond_ecran_apropos1.jpg');
-    }
-
-    .page-sercices .image {
-        background-image: url('../img_format_mobile/Photo_fond-ecran_apropos.jpg');
-    }
-
     /* Parie about se trouvant sur la page d'accueil*/
     .about-container, .container-personel {
         display: flex;
@@ -1024,7 +967,6 @@ footer {
     /*-------NOS REALISATIONS-------------*/
     .titreRealisation h3 {
         font-size: 20px;
-       
     }
 
     .realisation {
@@ -1154,8 +1096,7 @@ footer {
         margin: 0;
         margin-left: 0;
         margin-right: 0;
-    }
-    
+    } 
 }
 
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
