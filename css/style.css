@@ -152,7 +152,7 @@ p {
    /*-------faire clgnoter les prix---------*/
  @keyframes flash {
     0% { color: #ff0000; } /* Couleur rouge au début */
-    50% { color: #00ff00; } /* Couleur verte au milieu */
+    50% { color: #536053; } /* Couleur verte au milieu */
     100% { color: #f4a723; } /* Couleur rouge à la fin */
   }
   
@@ -216,14 +216,15 @@ header {
 #bnt_reserver { 
     background-color: #000000;
     color: white;
-    padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 20px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 2px;
 }
 #bnt_reserver:hover {
     background-color: #f4a723;
@@ -704,7 +705,7 @@ footer {
 }
 
 .footer-logo img {
-    max-width: 100px;
+    max-width: 150px;
     display: block;   /* Assure que l'image est un élément de bloc */
     margin-left: auto;
     margin-right: auto;
@@ -801,9 +802,9 @@ footer {
   #bnt_reserver{
     background-color: #0a0a0a;
     font-size: 10px; 
-    padding: 0; 
-    margin: 0;
+   padding-left: 0;
     margin-left:90px;
+    padding-top: 0;
     }
   
   #bnt_reserver a{
@@ -828,6 +829,7 @@ footer {
     font-size: 36px;
     left: 0px;
     top: 10px;
+    width: 25%;
   }
   .burger-icon span {
     display: block;
@@ -853,6 +855,10 @@ footer {
         text-align: center;
     }
 
+    .about-section{
+        padding: 0;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -863,15 +869,33 @@ footer {
         margin-bottom: 20px;
         min-width: 100%;
         margin: 0;
+        max-height: 40%;
     }
 
     .footer-logo img {
-        max-width: 120px;
+        max-width: 150px;
+        padding-top: 15px;
     }
 
     #logo img {
         max-width: 150px;
         padding-top: 15px;
+    }
+
+    
+    .footer-social h3, .footer-contact h3, .footer-legal h3, .footer-links h3 {
+        padding: 0;
+       margin-bottom: 0;
+    }
+
+    .footer-social ul li, .footer-contact ul li, .footer-legal ul li, .footer-links ul li {
+        padding: 0;
+       margin: 0;
+    }
+
+    .footer-logo p{
+        padding: 0;
+        margin: 0;
     }
 
     .footer-contact button {
@@ -894,12 +918,15 @@ footer {
     .about-content h1, .container-personel h2 {
         font-size: 20px;
         color: black;
+        margin: 0;
     }
 
     .about-content p, .container-personel p , .Nos_services p {
         font-size: 14px;
         font-family: 'Opensans';
         color: black;
+        margin: 0;
+        
     }
     .Nos_services h3{
         font-size: 18px;
@@ -1011,10 +1038,17 @@ footer {
 
     .adress p {
         font-size: 13px;
+        margin: 0;
+        padding: 0;
     }
 
     .adress a img{
         max-width: 100%;
+        margin: 0;
+    }
+    .adress{
+        margin: 0;
+        
     }
      /*---------------BOUTON "LIRE LA SUITE"-------------------*/
      .Presentation_salon {
@@ -1124,7 +1158,9 @@ footer {
         align-items: center;
         justify-content: center;
     }
-
+    .about-section{
+       padding: 0;
+    }
     .about-container, .personel-salon {
         display: flex;
         flex-wrap: wrap;
@@ -1245,6 +1281,7 @@ footer {
         justify-content: space-around;
         padding: 20px;
         margin: 40px;
+        margin-bottom: 100px;
     }
 
     .section-nosServices .section-coiffure, .section-maquillage, .section-boutique {
@@ -1429,7 +1466,11 @@ footer {
         transition: background-color 0.3s ease;
     }
 
-    .realisation-button button:hover {
+        .footer-contact ul li button{
+            padding: 4px;
+        }
+
+        .realisation-button button:hover {
         background-color: #f4a723;
     }
 
