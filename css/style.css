@@ -100,6 +100,9 @@ h2 {
 h3 {
     font-size: 2rem;
 }
+h5{
+    font-size: 1.5rem;
+}
 
 p {
     font-size: 1rem;
@@ -115,7 +118,7 @@ p {
     background-color:  #0F1D2B;
     opacity: 0.8;
 }
-.titre-page h3{
+.titre-page h1{
    color: #f4a723;
    font-size: 45px; 
    animation: blink 2s step-end infinite; /* Animation clignotante */  
@@ -157,10 +160,11 @@ p {
   }
   
   .flash {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
+    margin-left: 10px;
   }
   .flash {
     animation: flash 1s infinite; /* Applique l'animation en boucle infinie toutes les 1 seconde */
@@ -247,11 +251,11 @@ header {
     margin-top: 0;
 }
 .about-image {
-    flex: 1 1 40%;
+    flex: 1 1 45%;
 }
 .about-image img {
     width: 100%;
-    height: 50%;
+    /*height: 50%;*/
     border-radius: 10px;
     object-fit: cover;
 }
@@ -259,13 +263,13 @@ header {
     flex: 1 1 40%;
     text-align: left;
 }
-.about-content h1 {
-    font-size: 3rem;
+.about-content h2 {
+    font-size: 2.5rem;
     color: black;
-    margin-bottom: 20px;
+    
     text-align: center; 
 }
-.about-content h1 span {
+.about-content h2 span {
     color: black;
     font-family: cursive;
      margin-bottom: 0;
@@ -273,7 +277,7 @@ header {
 .about-content p {
     font-size: 1rem;
     color: black;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: justify; 
    
 }
@@ -319,7 +323,6 @@ header {
 /* ------------NOS SERVIVES------------------ */
 h3 {
     font-size: 20px;
-    color: #333;
     margin-bottom: 10px;
     padding: 20px;
 }
@@ -347,7 +350,7 @@ p {
     padding-bottom: 30px;
 }
 
-.buttons button, .btn  {
+.buttons button, .btn {
     background-color: black;
     color: #ffffff;
     border: none;
@@ -356,6 +359,7 @@ p {
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
 .buttons button, .btn:hover {
@@ -699,9 +703,9 @@ footer {
 
 .footer-logo p {
     text-align: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-size: 20px;
+   margin: 0;
+   padding: 0;
+    font-size: 18px;
 }
 
 .footer-logo img {
@@ -714,9 +718,17 @@ footer {
     list-style: none;
     padding: 0;
 }
+.footer-links h3,.footer-legal h3,.footer-social h3,.footer-contact h3 {
+   font-size: 20px;
+   padding: 0;
+   margin: 0;
+   text-decoration: underline;
+   text-decoration-thickness: 3px;
+}
 
 .footer-links ul li,.footer-legal ul li,.footer-social ul li,.footer-contact ul li {
     margin: 10px 0;
+
 }
 
 .footer-links a,.footer-legal a,.footer-social a,.footer-contact a {
@@ -741,9 +753,27 @@ footer {
     text-align: center;
     color: white;
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.mention_legale{
+    padding: 50px;
+    margin: 50px;
+}
+.mention_legale h3{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.mention_legale p{
+    text-align: justify;
+    font-size: 14px;
+    color: #333;
 }
 
-
+.mention_legale ul{
+    list-style: disc;
+}
 
 /*----------MEDIA QUERY POUR LE FORMAT TABLETTE MODE(PORTRAIT ET PAYSAGE) COMBINER------------------*/
 
@@ -843,6 +873,15 @@ footer {
     margin-right: 50px;
   }
 
+  .about-image img{
+    max-height: 800px;
+    
+  }
+  /**----les H5 qui gerent les prix*/
+ h5{
+    text-align: center;
+ }
+  
   /*-------------la page à propos------------------*/
     .personel-salon {
         flex-direction: column;
@@ -851,7 +890,7 @@ footer {
     .personel-salon p, h2 {
         object-fit: contain;
     }
-    .presentation_gauche  h2{
+    .presentation_gauche h3{
         text-align: center;
     }
 
@@ -896,6 +935,7 @@ footer {
     .footer-logo p{
         padding: 0;
         margin: 0;
+        
     }
 
     .footer-contact button {
@@ -915,7 +955,7 @@ footer {
         padding: 10px;
     }
 
-    .about-content h1, .container-personel h2 {
+    .about-content h2, .container-personel h2 {
         font-size: 20px;
         color: black;
         margin: 0;
@@ -936,6 +976,7 @@ footer {
     .about-content a button {
         padding: 8px 16px;
         font-size: 14px;
+        justify-items: center;
     }
 
     .personel-salon-img_gauche{
@@ -957,9 +998,10 @@ footer {
         padding: 15px;
     }
 
-    h3 {
-        font-size: 18px;
+    .section-maquillage h4, .section-boutique h4, .section-coiffure h4 {
+        font-size: 20px;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     p {
@@ -971,10 +1013,11 @@ footer {
         max-width: 100%;
     }
 
-    .buttons button {
+    .buttons button, .about-content button {
         padding: 8px 16px;
         font-size: 12px;
         background-color: black;
+       
     }
 
     /*----------NOUS CHOISIRE-------------------*/
@@ -985,6 +1028,8 @@ footer {
 
     .NousChoisire h3 {
         font-size: 18px;
+        color: #000;
+        text-align: center;
     }
 
     .NousChoisire ul li {
@@ -1021,7 +1066,7 @@ footer {
     }
     /* ---Avis de nos clients---- */
 
-    .TitreAvis h3, .section-coiffure h3, .section-maquillage h3, .section-boutique h3, .titreRealisation h3, .titreVisite h3 {
+    .TitreAvis h3,.titreRealisation h3, .titreVisite h3 {
         font-size: 20px;
         color: black;
     }
@@ -1061,6 +1106,11 @@ footer {
         display: none;
     }
 
+    .presentation h3, .presentation_gauche h3{
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+    }
     /* Cache le texte supplémentaire par défaut */
     .more-text {
         display: none;
@@ -1133,6 +1183,10 @@ footer {
     } 
 }
 
+.souligner {
+    text-decoration: underline; /* Applique un soulignement classique */
+    text-decoration-thickness: 3px; /* Change l'épaisseur du soulignement */
+}
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
 
 @media screen and (min-width: 1060px) {
@@ -1218,14 +1272,13 @@ footer {
         padding: 0;
     }
 
-    .about-content h1, .presentation h2,   .contact-form h1 {
+    .about-content h2, .presentation h3,.presentation_gauche h3,   .contact-form h2 {
         font-size: 3rem;
-        color: #333;
         text-align: center;
         font-family: 'Lato';
     }
 
-    .about-content h1 span {
+    .about-content h2 span {
         font-family: 'Lato';
         font-size: 3rem;
         color: black;
@@ -1254,7 +1307,7 @@ footer {
         max-width: 60%;
         margin: auto;
     }
-    .presentation h2{
+    .presentation h3, .presentation_gauche h3{
         color: black;
     }
    
@@ -1290,13 +1343,14 @@ footer {
         text-align: center;
         transition: transform 0.3s ease;
     }
-
+    .section-coiffure h4, .section-maquillage h4,.section-boutique h4 {
+        font-size: 30px;
+    }
     .section-nosServices section:hover {
         transform: translateY(-5px);
     }
     .section-nosServices h3 {
         font-size: 2rem;
-        color: #333;
         margin-bottom: 15px;
         padding: 0px;
         margin: 0;
@@ -1412,10 +1466,9 @@ footer {
         margin-bottom: 10px;
     }
 
-    .titreRealisation h3, .titreVisite h3, .TitreAvis h3 {
+    .titreRealisation h3, .titreVisite h3, .TitreAvis h3, .NousChoisire h3 {
         font-size: 2rem;
         font-family: 'Roboto';
-        color: #333;
         margin: 0;
         text-align: center;
     }
@@ -1489,4 +1542,5 @@ footer {
         height:500px;
         object-fit: cover;
     }
+
 }
