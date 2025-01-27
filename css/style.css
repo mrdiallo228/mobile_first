@@ -229,6 +229,7 @@ header {
     padding: 10px;
     padding-top: 0;
     padding-bottom: 2px;
+    height: 35px;
 }
 #bnt_reserver:hover {
     background-color: #f4a723;
@@ -468,7 +469,9 @@ p {
     transform: translateY(-50%);
     z-index: 2;  
 }
-
+.carousel-column h3{
+    text-align: center;
+}
 .carousel-controls label {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -758,7 +761,7 @@ footer {
 }
 .mention_legale{
     padding: 50px;
-    margin: 50px;
+    
 }
 .mention_legale h3{
     text-align: center;
@@ -831,14 +834,14 @@ footer {
 
   #bnt_reserver{
     background-color: #0a0a0a;
-    font-size: 10px; 
+    font-size: 24px; 
    padding-left: 0;
     margin-left:90px;
     padding-top: 0;
     }
   
   #bnt_reserver a{
-    font-size: 25px;
+    font-size: 24px;
     color: white;
     justify-content: center;
     text-align: justify;
@@ -940,7 +943,7 @@ footer {
 
     .footer-contact button {
         border-radius: 15px;
-        width: 25%;
+        /*width: 40%;*/
     }
 
     .footer-bottom {
@@ -998,7 +1001,7 @@ footer {
         padding: 15px;
     }
 
-    .section-maquillage h4, .section-boutique h4, .section-coiffure h4 {
+    .section-maquillage h4, .section-boutique h4, .section-coiffure h4, .carousel-column h3 {
         font-size: 20px;
         text-align: center;
         margin-bottom: 10px;
@@ -1187,6 +1190,31 @@ footer {
     text-decoration: underline; /* Applique un soulignement classique */
     text-decoration-thickness: 3px; /* Change l'épaisseur du soulignement */
 }
+
+/*--------Les infos legales----------------*/
+.mention_legale{
+ padding: 25px;
+}
+
+.mention_legale ul{
+    margin: 20px;
+    text-align: justify;
+   }
+
+.mention_legale p{
+    font-size: 16px;
+   }
+.mention_legale h3{
+    max-width: 100%;
+    object-fit: cover;
+    font-size: 18px;
+   }
+   .mention_legale h2{
+    max-width: 100%;
+    object-fit: cover;
+    font-size: 20px;
+    text-align: center;
+   }
 /*----------MEDIA QUERY POUR LE FORMAT ordinateur et pc potable------------------*/
 
 @media screen and (min-width: 1060px) {
@@ -1519,11 +1547,7 @@ footer {
         transition: background-color 0.3s ease;
     }
 
-        .footer-contact ul li button{
-            padding: 4px;
-        }
-
-        .realisation-button button:hover {
+    .realisation-button button:hover {
         background-color: #f4a723;
     }
 
