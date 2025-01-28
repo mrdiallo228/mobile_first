@@ -58,16 +58,7 @@ img,picture,video,canvas,svg {  /* corriger l’affichage des images */
         url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"),
         url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
 }
-@font-face {
-    font-family: 'Lato';
-    src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype"),
-        url("../fonts/Lato/Lato-Bold.ttf") format("truetype"),
-        url("../fonts/Lato/Lato-Italic.ttf") format("truetype"),
-        url("../fonts/Lato/OFL.txt") format("opentype");
-    font-weight: 400;
-    font-weight: 600;
-    font-weight: 800;
-}
+
 @font-face {
     font-family: 'OpenSans';
     font-weight: 400;
@@ -85,7 +76,7 @@ body {
 }
 
 h1 {
-    font-family: 'Lato', regular;
+    font-family: 'Roboto', regular;
     font-size: 3rem;
 }
 
@@ -495,7 +486,7 @@ p {
 .carousel-dots label {
     width: 10px;
     height: 10px;
-    background-color: #f4a723;
+    background-color:black;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
@@ -506,8 +497,10 @@ input[type="radio"]:checked + label {
 }
 
 .prev, .next{
-    color: #f4a723;
-    background-color: #3b3a3a; 
+    color: white;
+    background-color: black; 
+    width: 30px;
+    height: 30px;
 }
 /*---------------------text(h et p)------------------------------*/
 .realisation p {
@@ -599,7 +592,26 @@ input[type="radio"]:checked + label {
     font-weight: bold;
     color:#333;
 }
+.zone-meteo h3{
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
 
+.zone-meteo {
+    text-align: center;
+    padding-bottom: 0;
+    opacity: 0.8;
+    width: 100%;
+  }
+ #meteo{
+    background-color:  #0F1D2B;
+ }
+#meteo p {
+    font-size: 18px;
+    margin: 0;
+    color: #ffffff;
+}
 /*------------------page à propos-------*/
 
 .personel-salon h2, .Presentation_salon h2 {
@@ -949,6 +961,12 @@ footer {
     .footer-bottom {
         font-size: 12px;
         color: white;
+        text-align: center;
+    }
+    .footer-bottom p {
+        font-size: 12px;
+
+        text-align: center;
     }
     /* Parie about se trouvant sur la page d'accueil*/
     .about-container, .container-personel {
@@ -1303,11 +1321,11 @@ footer {
     .about-content h2, .presentation h3,.presentation_gauche h3,   .contact-form h2 {
         font-size: 3rem;
         text-align: center;
-        font-family: 'Lato';
+        font-family: 'Roboto';
     }
 
     .about-content h2 span {
-        font-family: 'Lato';
+        font-family: 'Roboto';
         font-size: 3rem;
         color: black;
     }
