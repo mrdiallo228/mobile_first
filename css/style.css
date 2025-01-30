@@ -308,8 +308,7 @@ header {
     color: #333;
     line-height: 1.8;
     text-align: justify;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
 }
 
 /* ------------NOS SERVIVES------------------ */
@@ -604,10 +603,10 @@ input[type="radio"]:checked + label {
     opacity: 0.8;
     width: 100%;
   }
- #meteo{
+ #weather{
     background-color:  #0F1D2B;
  }
-#meteo p {
+#weather p {
     font-size: 18px;
     margin: 0;
     color: #ffffff;
@@ -743,7 +742,6 @@ footer {
 
 .footer-links ul li,.footer-legal ul li,.footer-social ul li,.footer-contact ul li {
     margin: 10px 0;
-
 }
 
 .footer-links a,.footer-legal a,.footer-social a,.footer-contact a {
@@ -789,7 +787,32 @@ footer {
 .mention_legale ul{
     list-style: disc;
 }
+/*----------**fonctionalité AJAX**********-----*/
 
+.container-comment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px;
+}
+.card{
+    border-radius: 10px;
+    padding: 0;
+    background-color: #709391;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card p{
+    padding: 5px;
+    margin: 5px;
+    color: #333;
+}
+
+.card p em{
+   color: white;
+}
 /*----------MEDIA QUERY POUR LE FORMAT TABLETTE MODE(PORTRAIT ET PAYSAGE) COMBINER------------------*/
 
 @media screen and (max-width: 1059px) {
@@ -890,6 +913,7 @@ footer {
 
   .about-image img{
     max-height: 800px;
+    padding: 20px;
     
   }
   /**----les H5 qui gerent les prix*/
@@ -986,12 +1010,13 @@ footer {
         font-size: 14px;
         font-family: 'Opensans';
         color: black;
-        margin: 0;
-        
+        margin: 0; 
     }
     .Nos_services h3{
         font-size: 18px;
         color: black;
+        margin-bottom: 0;
+        padding: 0;
     }
 
     .about-content a button {
@@ -1013,8 +1038,13 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        padding: 20px;
     }
-
+    
+    .section-nosServices p, .section-maquillage p , .section-coiffure img {
+        padding: 10px;
+       
+    }
     section {
         padding: 15px;
     }
@@ -1037,8 +1067,7 @@ footer {
     .buttons button, .about-content button {
         padding: 8px 16px;
         font-size: 12px;
-        background-color: black;
-       
+        background-color: black; 
     }
 
     /*----------NOUS CHOISIRE-------------------*/
@@ -1085,6 +1114,30 @@ footer {
         font-size: 14px;
         padding: 8px 16px;
     }
+/*---------fonctionnalité AJAX*****-------*/
+    .container-comment {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 30px;
+       margin-left: 0 auto;
+       margin-right: 0 auto;
+    }
+    
+    .card{
+        border-radius: 10px;
+        background-color: #f45e5e;
+        text-align: center;
+        font-size: 18px;
+    }
+    .card p{
+        margin: 5px;
+        padding: 5px ;
+        color: #000;
+        opacity: 0.9;
+    }
+
     /* ---Avis de nos clients---- */
 
     .TitreAvis h3,.titreRealisation h3, .titreVisite h3 {
@@ -1098,8 +1151,9 @@ footer {
     }
 
     /*------- Nous rendre visite-----*/
-    .titreVisite h3 {
+    .titreVisite h3, .Titre_commentaire h3 {
         font-size: 20px;
+        text-align: center;
     }
 
     .adress p {
@@ -1378,7 +1432,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding: 20px;
+        padding: 0px;
         margin: 40px;
         margin-bottom: 100px;
     }
@@ -1416,7 +1470,7 @@ footer {
         margin-bottom: 20px;
         text-align: justify;
         font-family: 'OpenSans';
-        line-height: 1.8;
+        line-height: 1.8; 
     }
 
     .section-nosServices .buttons {
@@ -1512,7 +1566,7 @@ footer {
         margin-bottom: 10px;
     }
 
-    .titreRealisation h3, .titreVisite h3, .TitreAvis h3, .NousChoisire h3 {
+    .titreRealisation h3, .titreVisite h3, .TitreAvis h3, .NousChoisire h3, .Titre_commentaire h3 {
         font-size: 2rem;
         font-family: 'Roboto';
         margin: 0;
@@ -1584,5 +1638,4 @@ footer {
         height:500px;
         object-fit: cover;
     }
-
 }
