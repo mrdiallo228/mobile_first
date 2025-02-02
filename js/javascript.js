@@ -14,6 +14,7 @@ function closeNav() {   /* pour le bouton menu burger(fermeture) */
   sidenav.classList.remove("active");
 }
 
+
 /*----*********************GESTION DE LA METEO************************--------*/
 const apiKey = '7b69f8df42046728f5a5214a1f96f8ae'; //la clé API OpenWeatherMap
     const ville = 'Strasbourg'; //  choixde la ville à afficher
@@ -42,7 +43,67 @@ const apiKey = '7b69f8df42046728f5a5214a1f96f8ae'; //la clé API OpenWeatherMap
                 document.getElementById("meteo").innerHTML = "<p>Impossible de récupérer les données météo.</p>";
             });
     }
-    window.onload = obtenirMeteo;  // Appeler la fonction pour charger la météo dès que la page est chargée
+
+    //cette fonction remplace les deux window onload se trouvant la partie meteo et cookies
+    window.addEventListener('load', function() {
+      obtenirMeteo();
+      showCookieBanner();
+    });
+    //window.onload = obtenirMeteo;  // Appeler la fonction pour charger la météo dès que la page est chargée
+
+    // Vérifie si l'utilisateur a déjà fait un choix
+    function getCookieConsent() {
+      return JSON.parse(localStorage.getItem('cookieConsent'));
+    }
+
+    // Enregistre les préférences des cookies
+    function setCookieConsent(consent) {
+      localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    }
+
+    // Fonction pour afficher la bannière si l'utilisateur n'a pas encore fait de choix
+    function showCookieBanner() {
+      if (!getCookieConsent()) {
+        document.getElementById('cookie').style.display = 'block';
+      }
+    }
+
+    // Affiche la fenêtre de personnalisation des cookies
+    document.getElementById('cookie-personnaliser').addEventListener('click', function() {
+      document.getElementById('reglage-cookie').style.display = 'block';
+    });
+
+    // Sauvegarde les choix des cookies personnalisés
+    document.getElementById('save-settings').addEventListener('click', function() {
+      const consent = {
+        accepted: document.getElementById('analytics-cookies').checked,
+        advertising: document.getElementById('advertising-cookies').checked,
+        functional: document.getElementById('functional-cookies').checked
+      };
+      setCookieConsent(consent);
+      document.getElementById('cookie').style.display = 'none';
+      document.getElementById('reglage-cookie').style.display = 'none';
+    });
+
+    // Ferme la fenêtre de personnalisation sans enregistrer
+    document.getElementById('close-settings').addEventListener('click', function() {
+      document.getElementById('reglage-cookie').style.display = 'none';
+    });
+
+    // Accepter tous les cookies
+    document.getElementById('cookie-accepter').addEventListener('click', function() {
+      setCookieConsent({ accepted: true, advertising: true, functional: true });
+      document.getElementById('cookie').style.display = 'none';
+    });
+
+    // Refuser tous les cookies
+    document.getElementById('cookie-refuser').addEventListener('click', function() {
+      setCookieConsent({ accepted: false, advertising: false, functional: false });
+      document.getElementById('cookie').style.display = 'none';
+    });
+
+    // Appel de la fonction au chargement de la page
+    //window.onload = showCookieBanner;
     
 /*---------*************fonctionnalité AJAX******************----------------*/
 
@@ -66,9 +127,9 @@ fetch("http://127.0.0.1:5500//db.json")
         </div> `
     })
     console.log(html)
-
     container.innerHTML = html;
 })
+
 
 /*-----------************CARROUSEL************************------------------*/
 document.querySelectorAll('.carousel').forEach(carousel => {
